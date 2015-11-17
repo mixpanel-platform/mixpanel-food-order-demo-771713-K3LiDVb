@@ -17,13 +17,13 @@
      MP.api.ready(function() {
         
         // Events Data
-        var overallData = MP.api.events('Game Played', 'App Open', 'In-App Purchase', 'App Install', 'Registration Complete', {
+        var overallData = MP.api.events('Add to Cart', 'Signup', 'Submit Order', 'Choose Delivery Address', {
             from: moment().subtract(6, 'months'),
             unit: 'week'
         });
         
         $.when(overallData).done(function(overallData) { 
-          $('<span>' + "Events by Campaign Source" + '</span>').css({
+          $('<span>' + "Top events by Platform" + '</span>').css({
               'background': 'white',
               'border': '1px solid #7a8195',
               'border-radius': '5px',
