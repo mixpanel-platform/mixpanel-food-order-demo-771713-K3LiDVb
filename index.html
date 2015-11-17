@@ -98,7 +98,7 @@
         // App Install Event by Campaign Source
       event = 'Submit Order'
       
-        var appInstall = MP.api.segment(event, 'Days Since Last Order', {
+        var appInstall = MP.api.segment(event, 'Number Items in Cart', {
             from: moment().subtract(6, 'months'),
             unit: 'week'
         });
@@ -106,7 +106,7 @@
         $.when(appInstall).done(function(appInstall) {
           var appInstallData = appInstall.values()
           
-          $('<span>' + "Orders by Days Since Last Order" + '</span>').css({
+          $('<span>' + "Orders by Number Items in Cart" + '</span>').css({
             'background': 'white',
             'border': '1px solid #7a8195',
             'border-radius': '5px',
